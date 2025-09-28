@@ -157,7 +157,7 @@ bundle-delete: ## Delete bundle from cluster
 
 .PHONY: bundle-status
 bundle-status: ## Show operator instance status
-	$(TIMONI) -n tutorial-operator-system status tutorial-operator || true
+	$(TIMONI) -n tutorial-operator-system status operator || true
 
 .PHONY: kind-load
 kind-load: ## Load controller image into local Kind cluster
