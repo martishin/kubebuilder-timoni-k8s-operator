@@ -16,7 +16,7 @@ bundle: {
       namespace: "tutorial-operator-system"
       values: {
         namespace: "tutorial-operator-system"
-        image: "controller:v0.1.0"
+        image: "controller:dev"
         replicas: 1
         metrics: { enabled: true, port: 8443 }
         networkPolicy: { enabled: false }

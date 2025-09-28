@@ -4,7 +4,7 @@ values: {
   namespace:       *"tutorial-operator-system" | string
   createNamespace: *true | bool
 
-  image:           *"controller:v0.1.0" | string
+  image:           *"controller:dev" | string
   replicas:        *1 | int & >0
 
   metrics: {

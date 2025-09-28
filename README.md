@@ -1,4 +1,4 @@
-# Kubebuilder + Timoni K8s Operator
+# Kubebuilder + Timoni Kubernetes Operator
 
 A simple Kubernetes Operator (built with Kubebuilder) that reconciles a
 **Guestbook** custom resource (`webapp.my.domain/v1, Kind=Guestbook`).  
@@ -84,7 +84,7 @@ kind create cluster --name myclaster
 make docker-build IMG=controller:dev
 
 # 3) Load the image into Kind
-make kind-load IMG=controller:devKIND_CLUSTER=myclaster
+make kind-load IMG=controller:dev KIND_CLUSTER=myclaster
 
 # 4) Point the Timoni bundle to that image (in-place edit)
 make bundle-set-image IMG=controller:dev
