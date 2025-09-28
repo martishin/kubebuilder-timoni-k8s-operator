@@ -81,13 +81,13 @@ If you already have a Kind cluster named `myclaster`, skip the create step.
 kind create cluster --name myclaster
 
 # 2) Build the controller image
-make docker-build IMG=controller:v0.1.0
+make docker-build IMG=controller:dev
 
 # 3) Load the image into Kind
-make kind-load IMG=controller:v0.1.0 KIND_CLUSTER=myclaster
+make kind-load IMG=controller:devKIND_CLUSTER=myclaster
 
 # 4) Point the Timoni bundle to that image (in-place edit)
-make bundle-set-image IMG=controller:v0.1.0
+make bundle-set-image IMG=controller:dev
 
 # 5) Apply everything with Timoni
 make bundle-apply
@@ -95,7 +95,7 @@ make bundle-apply
 
 > Tip: You can do steps (2)–(5) in one shot with:
 > ```bash
-> make release-local IMG=controller:v0.1.1 KIND_CLUSTER=myclaster
+> make release-local IMG=controller:dev KIND_CLUSTER=myclaster
 > ```
 
 ### Preview, apply, status
@@ -216,7 +216,7 @@ repo (recommended), add a short README to `config/` stating:
 If you still want a single YAML bundle (e.g., for troubleshooting), you can render it:
 
 ```bash
-make build-installer IMG=controller:v0.1.0
+make build-installer IMG=controller:dev
 # outputs dist/install.yaml
 kubectl apply -f dist/install.yaml
 ```
