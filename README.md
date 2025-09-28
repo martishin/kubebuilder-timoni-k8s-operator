@@ -1,7 +1,7 @@
-# tutorial-operator
+# Kubebuilder + Timoni K8s Operator
 
 A simple Kubernetes Operator (built with Kubebuilder) that reconciles a
-**Guestbook** custom resource (`webapp.my.domain/v1, Kind=Guestbook`).
+**Guestbook** custom resource (`webapp.my.domain/v1, Kind=Guestbook`).  
 For each `Guestbook`, the controller creates and maintains a matching
 `Deployment` and `Service` (image, replicas, and port come from the spec)
 and reports readiness via `.status.conditions` and `.status.readyReplicas`.
